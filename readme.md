@@ -47,6 +47,8 @@ XR4
 
 **Eg.** PD1 of the solution above means vehicle P move downward one step
 
+By following all of the steps will lead to a solved board.
+
 ### Executing program
 
 The application can be compiled by running 
