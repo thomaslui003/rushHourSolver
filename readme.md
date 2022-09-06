@@ -51,11 +51,12 @@ By following all of the steps will lead to a solved board.
 
 ### Executing program
 
-The application can be compiled by running 
+The application can be compiled and run by executing the following at the src file level:
 ```
 javac rushhourtest/TestRushHour.java
 java rushhourtest/TestRushHour
 ```
+If there are errors, change the directories of input and output files of the testcase and result in the TestRushHour file.
 The execution will create all step by step solution to all input board in a text file format.
 
 
