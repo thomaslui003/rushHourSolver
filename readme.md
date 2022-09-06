@@ -56,7 +56,7 @@ The application can be compiled and run by executing the following at the src fi
 javac rushhourtest/TestRushHour.java
 java rushhourtest/TestRushHour
 ```
-If there are errors locating the testcase files, change the directories of the input testcase and output resulting files in the TestRushHour file.
+If there are errors locating the testcase files, change the directories of the input testcase and output resulting files in the TestRushHour java file.
 
 The execution will create all step by step solution to all input board in a text file format.
 
