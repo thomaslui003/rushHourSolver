@@ -13,21 +13,49 @@ The classes’ structure consists of 4 classes: the Solver class, the RushHourGr
 
 **Example testcase:**
 
-AAB.CC                                                                                                                                                     
-DDB..O                                                                                                                                                     
-PXX.EO                                                                                                                                                     
-PQQQEO                                                                                                                                                     
-PF.GHH                                                                                                                                                     
-.F.GII                                                                                                                                                     
+<img src="https://github.com/thomaslui003/rushHourSolver/blob/main/testcase.png" width="264" height="328">
 
+**Solution to above board:**
+
+PD1
+CL1
+OU1
+XL1
+EU1
+QR2
+BD4
+AR1
+XR1
+DR1
+PU3
+QL3
+GU3
+QR3
+PD3
+DL1
+AL1
+IL1
+XL1
+BU4
+QL2
+HL2
+OD3
+ED2
+CR1
+GU1
+XR4
+
+**Eg.** PD1 of the solution above means vehicle P move downward one step
 
 ### Executing program
 
-The application can be compiled and run using Android studio.
+The application can be compiled by running 
+```
+javac rushhourtest/TestRushHour.java
+java rushhourtest/TestRushHour
+```
+The execution will create all step by step solution to all input board in a text file format.
 
-The software uses Android API 24 and will be compatible with systems running Android 7.0.0+
 
-
-styleguide: https://google.github.io/styleguide/javaguide.html
 
 
