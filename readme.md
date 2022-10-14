@@ -15,7 +15,7 @@ The program class structure consists of 4 classes: the Solver class, the RushHou
 
 <img src="https://github.com/thomaslui003/rushHourSolver/blob/main/testcase.png" width="264" height="328">
 
-**Solution to above board:**
+**Solution to the board above:**
 
 PD1
 CL1
