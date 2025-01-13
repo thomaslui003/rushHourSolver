@@ -2,7 +2,6 @@ package rushhourtest;
 import java.io.File;
 import java.io.FileNotFoundException;  // Import this class to handle errors
 import java.util.Scanner;
-
 import rushhour.Solver;
 
 
@@ -38,7 +37,7 @@ TestRushHour
 			Scanner scannerSolution = new Scanner(new File(solName));
 			while (scannerSolution.hasNextLine()) {
 				String line = scannerSolution.nextLine();
-				//System.out.println("lmao "+line);
+				
 				if (line.length() != 3)
 					throw new IllegalMoveException(line);
 				puzzle.makeMove(line.charAt(0), dirChar2Int(line.charAt(1)), line.charAt(2) - '0');
@@ -54,45 +53,44 @@ TestRushHour
 
 	}
 
+	// if wanted to run at the level: ../Desktop/rushHourSolver/
+	// compile with: javac -sourcepath testingSolver1/src testingSolver1/src/rushhourtest/TestRushHour.java
+	// run with: java -cp testingSolver1/src rushhourtest.TestRushHour
+
 	public static void main(String[] args) throws FileNotFoundException {
 		System.out.println("Working Directory = " + System.getProperty("user.dir"));
 
+		String basePath = "../rushHourSolver/testingSolver1/src/";
+
 		for (int i = 0; i < 36; i++) {
 
+			String inputFile = ""; 
+			String outputFile = "";
+
 			if(i<10){
-				Solver.solveFromFile("/Users/thomaslui/Desktop/testingSolver1/src/"+"A0"+i+".txt","/Users/thomaslui/Desktop/testingSolver1/src/"+"sol-"+"A0"+i+".txt");
 
-
-				testSolution("/Users/thomaslui/Desktop/testingSolver1/src/"+"A0"+i+".txt", "/Users/thomaslui/Desktop/testingSolver1/src/"+"sol-"+"A0"+i+".txt");
-
-			}
-			if(i==10){
-				Solver.solveFromFile("/Users/thomaslui/Desktop/testingSolver1/src/"+"A"+i+".txt","/Users/thomaslui/Desktop/testingSolver1/src/"+"sol-"+"A"+i+".txt");
-
-
-				testSolution("/Users/thomaslui/Desktop/testingSolver1/src/"+"A"+i+".txt", "/Users/thomaslui/Desktop/testingSolver1/src/"+"sol-"+"A"+i+".txt");
-			}
-			if((i<=20)&&(i>=11)){
-
-				Solver.solveFromFile("/Users/thomaslui/Desktop/testingSolver1/src/"+"B"+i+".txt","/Users/thomaslui/Desktop/testingSolver1/src/"+"sol-"+"B"+i+".txt");
-
-
-				testSolution("/Users/thomaslui/Desktop/testingSolver1/src/"+"B"+i+".txt", "/Users/thomaslui/Desktop/testingSolver1/src/"+"sol-"+"B"+i+".txt");
+				inputFile = basePath + "A0" + i + ".txt"; 
+				outputFile = basePath + "sol-A0" + i + ".txt";
 
 			}
-			if((i<=29)&&(i>=21)){
-				Solver.solveFromFile("/Users/thomaslui/Desktop/testingSolver1/src/"+"C"+i+".txt","/Users/thomaslui/Desktop/testingSolver1/src/"+"sol-"+"C"+i+".txt");
-
-
-				testSolution("/Users/thomaslui/Desktop/testingSolver1/src/"+"C"+i+".txt", "/Users/thomaslui/Desktop/testingSolver1/src/"+"sol-"+"C"+i+".txt");
+			else if (i < 11) { 
+				inputFile = basePath + "A" + i + ".txt"; 
+				outputFile = basePath + "sol-A" + i + ".txt";
+			}else if (i < 21) { 
+				inputFile = basePath + "B" + i + ".txt";
+				outputFile = basePath + "sol-B" + i + ".txt"; 
+			}else if (i < 30) { 
+				inputFile = basePath + "C" + i + ".txt";
+				outputFile = basePath + "sol-C" + i + ".txt"; 
+			}else if (i < 36) { 
+				inputFile = basePath + "D" + i + ".txt"; 
+				outputFile = basePath + "sol-D" + i + ".txt"; 
 			}
-			if((i<=35)&&(i>=30)){
-				Solver.solveFromFile("/Users/thomaslui/Desktop/testingSolver1/src/"+"D"+i+".txt","/Users/thomaslui/Desktop/testingSolver1/src/"+"sol-"+"D"+i+".txt");
 
 
-				testSolution("/Users/thomaslui/Desktop/testingSolver1/src/"+"D"+i+".txt", "/Users/thomaslui/Desktop/testingSolver1/src/"+"sol-"+"D"+i+".txt");
-
-			}
+			Solver.solveFromFile(inputFile, outputFile); 
+			
+			testSolution(inputFile, outputFile);
 
 
 
