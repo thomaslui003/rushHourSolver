@@ -55,10 +55,10 @@ By following all of the steps will lead to a solved board.
 
 ### Executing program
 
-The application can be compiled and run by executing the following at the src file level:
+The application can be compiled and run by executing the following at the ../rushHourSolver/ file level:
 ```
-javac rushhourtest/TestRushHour.java
-java rushhourtest/TestRushHour
+javac -sourcepath testingSolver1/src testingSolver1/src/rushhourtest/TestRushHour.java
+java -cp testingSolver1/src rushhourtest.TestRushHour
 ```
 If there are errors locating the testcase files, change the directories of the input testcase and output resulting files in the TestRushHour java file.
 
